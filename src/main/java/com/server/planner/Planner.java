@@ -4,11 +4,8 @@ import com.server.planner.domain.Machine;
 import com.server.planner.domain.TYPE;
 
 import java.util.Collection;
-import java.util.List;
 import java.util.Objects;
 import java.util.Optional;
-import java.util.stream.Collectors;
-import java.util.stream.Stream;
 
 public class Planner {
 

@@ -40,14 +40,12 @@ public class PlannerTest {
 
         Machine.Builder builder = Machine.Builder();
 
-        Executable code = () -> {
-            builder
-                    .withCpu(0)
-                    .withRam(32)
-                    .withHDD(100)
-                    .ofType(SERVER)
-                    .build();
-        };
+        Executable code = () -> builder
+                .withCpu(0)
+                .withRam(32)
+                .withHDD(100)
+                .ofType(SERVER)
+                .build();
 
         assertThrows(IllegalArgumentException.class,
                 code,
@@ -59,14 +57,12 @@ public class PlannerTest {
 
         Machine.Builder builder = Machine.Builder();
 
-        Executable code = () -> {
-            builder
-                    .withCpu(2)
-                    .withRam(0)
-                    .withHDD(100)
-                    .ofType(SERVER)
-                    .build();
-        };
+        Executable code = () -> builder
+                .withCpu(2)
+                .withRam(0)
+                .withHDD(100)
+                .ofType(SERVER)
+                .build();
 
         assertThrows(IllegalArgumentException.class,
                 code,
@@ -78,14 +74,12 @@ public class PlannerTest {
 
         Machine.Builder builder = Machine.Builder();
 
-        Executable code = () -> {
-            builder
-                    .withCpu(2)
-                    .withRam(32)
-                    .withHDD(0)
-                    .ofType(SERVER)
-                    .build();
-        };
+        Executable code = () -> builder
+                .withCpu(2)
+                .withRam(32)
+                .withHDD(0)
+                .ofType(SERVER)
+                .build();
 
         assertThrows(IllegalArgumentException.class,
                 code,
@@ -98,14 +92,12 @@ public class PlannerTest {
 
         Machine.Builder builder = Machine.Builder();
 
-        Executable code = () -> {
-            builder
-                    .withCpu(2)
-                    .withRam(32)
-                    .withHDD(0)
-                    .ofType(null)
-                    .build();
-        };
+        Executable code = () -> builder
+                .withCpu(2)
+                .withRam(32)
+                .withHDD(100)
+                .ofType(null)
+                .build();
 
         assertThrows(IllegalArgumentException.class,
                 code,
@@ -126,9 +118,7 @@ public class PlannerTest {
         Planner planner = new Planner();
 
 
-        Executable code = () -> {
-            planner.calculate(virtualMachine, Collections.singleton(virtualMachine));
-        };
+        Executable code = () -> planner.calculate(virtualMachine, Collections.singleton(virtualMachine));
 
         assertThrows(IllegalArgumentException.class,
                 code,
@@ -151,9 +141,7 @@ public class PlannerTest {
         Planner planner = new Planner();
 
 
-        Executable code = () -> {
-            planner.calculate(server, Collections.singleton(server));
-        };
+        Executable code = () -> planner.calculate(server, Collections.singleton(server));
 
         assertThrows(IllegalArgumentException.class,
                 code,
@@ -176,9 +164,7 @@ public class PlannerTest {
         Planner planner = new Planner();
 
 
-        Executable code = () -> {
-            planner.calculate(server, Collections.singleton(server));
-        };
+        Executable code = () -> planner.calculate(server, Collections.singleton(server));
 
         assertThrows(IllegalArgumentException.class,
                 code,
@@ -201,9 +187,7 @@ public class PlannerTest {
         Planner planner = new Planner();
 
 
-        Executable code = () -> {
-            planner.calculate(null, Collections.singleton(server));
-        };
+        Executable code = () -> planner.calculate(null, Collections.singleton(server));
 
         assertThrows(IllegalArgumentException.class,
                 code,

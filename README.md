@@ -27,9 +27,5 @@ Example:
     - Virtual Machines = [{CPU: 1, RAM: 16, HDD: 10}, {CPU: 1, RAM: 16, HDD: 10}, {CPU: 2, RAM: 32, HDD: 100}]
     - Result = 2
 
-------------------------------------------------------------------------------
-General Requirements:
-    - Create a Maven or Gradle project with language version 8 or higher 
-    - Free choice of dependecies, but keep it simple
-    - Your code should be fully (unit) tested!  
+------------------------------------------------------------------------------  
 ```

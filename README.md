@@ -1,4 +1,5 @@
 # server-planner
+```text
 
  / ___|  ___ _ ____   _____ _ __     |  _ \| | __ _ _ __  _ __ (_)_ __   __ _ 
  \___ \ / _ \ '__\ \ / / _ \ '__|____| |_) | |/ _` | '_ \| '_ \| | '_ \ / _` |
@@ -31,3 +32,4 @@ General Requirements:
     - Create a Maven or Gradle project with language version 8 or higher 
     - Free choice of dependecies, but keep it simple
     - Your code should be fully (unit) tested!  
+```

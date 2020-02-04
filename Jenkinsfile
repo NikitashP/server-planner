@@ -7,21 +7,10 @@ pipeline {
   stages {
     stage('tests') {
           agent none
-
           steps {
-
-              sh """
-                echo "Inside test step"
-              """
-
-                        script {
-                            // CHANGE_ID is set only for pull requests, so it is safe to access the pullRequest global variable
-                            if (env.CHANGE_ID) {
-                                pullRequest.addLabel('Tadaaa !!')
-                            } }
-                      shell """
-                        echo "here..."
-                      """
+                echo "build number: $env.BUILD_NUMBER"
+                echo "change id: $env.CHANGE_ID"
+                echo "branch name $env.BRANCH_NAME"
           }
 
     } // END stage('tests')

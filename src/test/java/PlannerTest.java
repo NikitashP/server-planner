@@ -173,7 +173,7 @@ public class PlannerTest {
     }
 
 
-    @Test
+   /* @Test
     void testPlannerIsAcceptingNullableServerForCalculation() {
 
         Machine server = Machine.Builder()
@@ -193,7 +193,7 @@ public class PlannerTest {
                 code,
                 "Machine configuration cannot be null");
 
-    }
+    }*/
 
 
     @Test
